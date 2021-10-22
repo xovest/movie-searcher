@@ -87,9 +87,9 @@ const main = document.getElementById('main');
 const form =  document.getElementById('form');
 const search = document.getElementById('search');
 const tagsEl = document.getElementById('tags');
-const prev = document.getElementById('prev')
-const next = document.getElementById('next')
-const current = document.getElementById('current')
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+const current = document.getElementById('current');
 
 var currentPage = 1;
 var nextPage = 2;
@@ -143,7 +143,7 @@ function highlightSelection() {
   }
 }
 
-function clearBtn() {
+function clearBtn() { //really need to change so that you won't see it after the toggle
   let added = document.getElementById('clear');
   if (added) {
     added.classList.add('highlight');
@@ -182,7 +182,7 @@ function getMovies(url) {
         if (currentPage <= 1) {
           prev.classList.add('disabled');
           next.classList.remove('disabled');
-        } else if (currentPage>= totalPages){
+        } else if (currentPage >= totalPages){
           prev.classList.remove('disabled');
           next.classList.add('disabled');
         } else {
