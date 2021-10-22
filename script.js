@@ -143,16 +143,15 @@ function highlightSelection() {
   }
 }
 
-function clearBtn() { //really need to change so that you won't see it after the toggle
-  let added = document.getElementById('clear');
-  if (added) {
-    added.classList.add('highlight');
+function clearBtn() {
+  let clearBtn = document.getElementById('clear');
+  if (clearBtn) {
+    clearBtn.classList.add('highlight');
   } else {
     let clear = document.createElement('div');
     clear.classList.add('tag', 'highlight');
     clear.id = 'clear';
     clear.innerText = 'Clear X';
-
     clear.addEventListener('click', () => {
       selectedGenre = [];
       setGenre();
